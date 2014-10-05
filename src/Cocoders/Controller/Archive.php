@@ -44,7 +44,6 @@ class Archive implements CreateArchiveResponder
             new InMemoryArchiveFactory(),
             $archiveRepository
         );
-        $this->listArchiveUseCase = new ArchiveListUseCase($archiveRepository);
         $this->createArchiveUseCase->addResponder($this);
     }
 
