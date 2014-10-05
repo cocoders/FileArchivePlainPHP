@@ -8,7 +8,6 @@ use Cocoders\FileSource\DummyFileSource\DummyFileSource;
 use Cocoders\FileSource\InMemoryFileSource\InMemoryFileSourceRegistry;
 use Cocoders\FormType\CreateArchiveFormType;
 use Cocoders\Repository\PgsqlArchiveRepository;
-use Cocoders\UseCase\ArchiveList\ArchiveListUseCase;
 use Cocoders\UseCase\CreateArchive\CreateArchiveRequest;
 use Cocoders\UseCase\CreateArchive\CreateArchiveResponder;
 use Cocoders\UseCase\CreateArchive\CreateArchiveUseCase;
@@ -45,7 +44,6 @@ class Archive implements CreateArchiveResponder
             new InMemoryArchiveFactory(),
             $archiveRepository
         );
-        var_dump($archiveRepository->findAll());
         $this->listArchiveUseCase = new ArchiveListUseCase($archiveRepository);
         $this->createArchiveUseCase->addResponder($this);
     }
