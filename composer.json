@@ -1,0 +1,25 @@
+{
+    "name": "cocoders/file-archive-integration-examples",
+    "license": "MIT",
+    "type": "project",
+    "description": "Examples of integration cocoders/file-archive with some plain PHP web stuff",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "cocoders/file-archive": "dev-master@dev",
+        "symfony/form": "2.6.*@dev",
+        "symfony/validator": "2.6.*@dev",
+        "symfony/http-foundation": "2.6.*@dev",
+        "symfony/twig-bridge": "2.1.*",
+        "symfony/translation": "2.1.*@dev"
+    },
+    "require-dev": {
+        "behat/behat": "3.0.*",
+        "phpspec/phpspec": "2.0.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin"
+    } 
+}
